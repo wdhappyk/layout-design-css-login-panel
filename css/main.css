@@ -1,0 +1,189 @@
+/* Fonts */
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Bold.ttf);
+    font-weight: bold;
+}
+
+/* Conf */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 5em 0;
+    letter-spacing: .06em;
+    font-family: Montserrat, Arial, sans-serif;
+    background: linear-gradient(33deg, #b642e3, #eb637b 61%, #fb9287);
+}
+
+input, button {
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+}
+
+h1 {
+    font-size: 3.2em;
+}
+
+/* Animations */
+
+@keyframes show {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Style */
+
+.card {
+    padding: 7em 1em 14em;
+    margin: 0 auto;
+    max-width: 50em;
+    background: #373656 url(../img/form-bg.png) bottom center no-repeat;
+    background-size: 120% auto;
+    border-radius: 20px;
+    box-shadow: 10px 15px 36px hsla(0, 0%, 0%, .21);
+    animation: .5s show ease-in-out;
+}
+
+/* Colorful title */
+
+.colorful-title {
+    margin-bottom: .5em;
+    text-align: center;
+    color: #ea617b;
+}
+
+.colorful-title span {
+    color: #f97d75;
+}
+
+/* Form */
+
+.flat-form {
+    margin: 0 auto;
+    max-width: 28em;
+}
+
+.flat-input {
+    position: relative;
+    overflow: hidden;
+    padding-top: 1em;
+    border-radius: 7px;
+}
+
+.flat-input hr {
+    position: relative;
+    top: -2px;
+    margin: 0 auto;
+    width: 10%;
+    height: 2px;
+    background: linear-gradient(-90deg, #ea617b, #f97d75);
+    opacity: 0;
+    border: none;
+    transition: .3s;
+}
+
+.btn,
+.flat-input input {
+    display: block;
+    outline: none;
+    padding: 1em 2em;
+    border: none;
+    color: #fff;
+}
+
+.btn {
+    border-radius: 100em;
+    text-align: center;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: inset 0 100em 0 rgba(0, 0, 0, .3);
+}
+
+.flat-input input {
+    position: relative;
+    width: 100%;
+    background: #4c4c71;
+    border-radius: 5px;
+}
+
+.flat-input label {
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
+    font-size: .8em;
+    color: #f97d75;
+    transition: .3s;
+    z-index: -1;
+    opacity: 0;
+}
+
+.flat-input input:focus ~ label,
+.flat-input input:not(:invalid) ~ label {
+    top: .18em;
+    opacity: 1;
+    z-index: 0;
+}
+
+.flat-input input:focus ~ hr {
+    width: 100%;
+    opacity: 1;
+    border-radius: 100%;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.btn-group .btn {
+    margin: 0 .5em;
+    flex: auto;
+}
+
+.btn-group .btn:first-child {
+    margin-left: 0;
+}
+.btn-group .btn:last-child {
+    margin-right: 0;
+}
+
+.btn-purple {
+    background: linear-gradient(-90deg, #ce6dfb, #6865f2);
+}
+
+.btn-pink {
+    background: linear-gradient(90deg, #ea617b, #fc9487);
+}
+
+.flat-input::placeholder {
+    color: #8585ae;
+}
+
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #373656;
+}
